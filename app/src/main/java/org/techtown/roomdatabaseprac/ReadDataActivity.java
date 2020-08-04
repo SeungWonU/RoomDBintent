@@ -4,7 +4,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.loader.content.AsyncTaskLoader;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -32,6 +31,8 @@ public class ReadDataActivity extends AppCompatActivity {
                 List<MyDataList>myDataLists = MainActivity.myDatabase.myDao().getMyData();
                 return myDataLists;
             }
+
+            @Override
             protected void onPostExecute(List<MyDataList>myDataList){
                 MyAdapter adapter = new MyAdapter(myDataList);
                 rv.setAdapter(adapter);

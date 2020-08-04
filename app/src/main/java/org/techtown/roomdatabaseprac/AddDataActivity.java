@@ -1,5 +1,6 @@
 package org.techtown.roomdatabaseprac;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +23,7 @@ private Button btn_save;
         etCity=(EditText)findViewById(R.id.editCity);
         btn_save=(Button)findViewById(R.id.btn_add);
 
+        Intent intent = getIntent();
         btn_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
