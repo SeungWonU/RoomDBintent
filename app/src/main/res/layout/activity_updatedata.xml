@@ -3,67 +3,70 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".UpdatedataAct">
+
+    <Button
+        android:id="@+id/Updata_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="88dp"
+        android:text="UPDATE_DATA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/uet_id"
+        android:id="@+id/uet_ID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="ID"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/uet_name"
+        app:layout_constraintBottom_toTopOf="@+id/uet_Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/uet_name"
+        android:id="@+id/uet_Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Name"
+        android:hint="name"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/uet_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/uet_id" />
+        app:layout_constraintTop_toBottomOf="@+id/uet_ID" />
 
     <EditText
         android:id="@+id/uet_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Email"
+        android:hint="email"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/uet_city"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/uet_name" />
+        app:layout_constraintTop_toBottomOf="@+id/uet_Name" />
 
     <EditText
         android:id="@+id/uet_city"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="City"
+        android:hint="city"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/Update_Button"
+        app:layout_constraintBottom_toTopOf="@+id/Updata_Button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/uet_email" />
 
-    <Button
-        android:id="@+id/Update_Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="UPDATA DATA"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/uet_city" />
 </androidx.constraintlayout.widget.ConstraintLayout>

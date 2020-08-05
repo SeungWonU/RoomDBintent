@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity{
         readdata.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,ReadDataActivity.class));
+                startActivity(new Intent(MainActivity.this,ReaddataAct.class));
 
             }
         });
@@ -41,13 +41,13 @@ public class MainActivity extends AppCompatActivity{
     deletedata.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            startActivity(new Intent(MainActivity.this,DeleteDataActivity.class));
+            startActivity(new Intent(MainActivity.this,DeletedataAct.class));
         }
     });
         updatedata.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,UpdateDataActivity.class));
+                startActivity(new Intent(MainActivity.this,UpdatedataAct.class));
             }
         });
     }

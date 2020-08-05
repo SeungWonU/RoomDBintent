@@ -1,20 +1,21 @@
 package org.techtown.roomdatabaseprac;
 
-import android.os.AsyncTask;
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.AsyncTask;
+import android.os.Bundle;
+
 import java.util.List;
 
-public class ReadDataActivity extends AppCompatActivity {
+public class ReaddataAct extends AppCompatActivity {
     private RecyclerView rv;
 
+    @Override
     protected void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
-        setContentView(R.layout.activity_read_data);
+        setContentView(R.layout.activity_readdata);
 
         rv=(RecyclerView)findViewById(R.id.rec);
         rv.setHasFixedSize(true);
@@ -23,7 +24,7 @@ public class ReadDataActivity extends AppCompatActivity {
         getData();
     }
     private void getData(){
-        class GetData extends AsyncTask<Void,Void, List<MyDataList>>{
+        class GetData extends AsyncTask<Void,Void, List<MyDataList>> {
 
 
             @Override

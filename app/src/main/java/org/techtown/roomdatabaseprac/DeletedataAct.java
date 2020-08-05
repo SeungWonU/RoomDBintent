@@ -1,27 +1,30 @@
 package org.techtown.roomdatabaseprac;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import androidx.appcompat.app.AppCompatActivity;
+public class DeletedataAct extends AppCompatActivity {
 
-public class DeleteDataActivity extends AppCompatActivity {
-EditText etText;
-Button deleteBtn;
 
+    EditText etText2;
+    Button deleteBtn2;
+
+    @Override
     protected void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
-        setContentView(R.layout.activity_delete_data);
+        setContentView(R.layout.activity_deletedata);
 
-        etText = findViewById(R.id.etText);
-        deleteBtn = findViewById(R.id.button_delete);
+        etText2 = findViewById(R.id.etText2);
+        deleteBtn2 = findViewById(R.id.deleteButton2);
 
-        deleteBtn.setOnClickListener(new View.OnClickListener() {
+        deleteBtn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String data = etText.getText().toString();
+                String data = etText2.getText().toString();
                 int id = Integer.parseInt(data);
                 MainActivity.myDatabase.myDao().deleteitem(id);
             }

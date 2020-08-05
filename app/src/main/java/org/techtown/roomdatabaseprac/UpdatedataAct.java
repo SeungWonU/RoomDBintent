@@ -1,26 +1,27 @@
 package org.techtown.roomdatabaseprac;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class UpdateDataActivity extends AppCompatActivity {
+public class UpdatedataAct extends AppCompatActivity {
     private EditText etid,etName,etEmail,etCity;
     private Button update_btn;
 
+    @Override
     protected  void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
-        setContentView(R.layout.activity_update_data);
+        setContentView(R.layout.activity_updatedata);
 
-        etid = (EditText)findViewById(R.id.uet_id);
-        etName=(EditText)findViewById(R.id.uet_name);
+        etid = (EditText)findViewById(R.id.uet_ID);
+        etName=(EditText)findViewById(R.id.uet_Name);
         etEmail = (EditText)findViewById(R.id.uet_email);
         etCity = (EditText)findViewById(R.id.uet_city);
-        update_btn = findViewById(R.id.button_update);
+        update_btn = findViewById(R.id.Updata_Button);
 
         update_btn.setOnClickListener(new View.OnClickListener() {
             @Override
