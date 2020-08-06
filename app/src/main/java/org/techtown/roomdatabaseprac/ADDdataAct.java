@@ -23,7 +23,6 @@ public class ADDdataAct extends AppCompatActivity {
         etCity2=(EditText)findViewById(R.id.editCity2);
         btn_save2=(Button)findViewById(R.id.btn_add2);
 
-        Intent intent = getIntent();
         btn_save2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,7 +31,9 @@ public class ADDdataAct extends AppCompatActivity {
                 String email2 = etEmail2.getText().toString();
                 String city2 = etCity2.getText().toString();
 
+
                 MyDataList myDataList = new MyDataList();
+                myDataList.getId();
                 myDataList.setId(uid2);
                 myDataList.setName(name2);
                 myDataList.setEmail(email2);
@@ -44,6 +45,9 @@ public class ADDdataAct extends AppCompatActivity {
                 etName2.setText("");
                 etEmail2.setText("");
                 etCity2.setText("");
+                Intent intent = new Intent();
+                setResult(101,intent);
+                finish();
             }
         });
 

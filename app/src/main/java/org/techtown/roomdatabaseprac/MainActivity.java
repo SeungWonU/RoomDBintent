@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity{
         adddata.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,ADDdataAct.class));
+                Intent intent =new Intent(MainActivity.this,ADDdataAct.class);
+                startActivityForResult(intent,101);
             }
         });
         readdata.setOnClickListener(new View.OnClickListener() {
