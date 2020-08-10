@@ -2,6 +2,7 @@ package org.techtown.roomdatabaseprac;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,6 +28,9 @@ public class DeletedataAct extends AppCompatActivity {
                 String data = etText2.getText().toString();
                 int id = Integer.parseInt(data);
                 MainActivity.myDatabase.myDao().deleteitem(id);
+                Intent intent = new Intent();
+                setResult(103,intent);
+                finish();
             }
         });
     }

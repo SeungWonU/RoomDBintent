@@ -2,6 +2,7 @@ package org.techtown.roomdatabaseprac;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -42,6 +43,10 @@ public class UpdatedataAct extends AppCompatActivity {
                 etName.setText("");
                 etEmail.setText("");
                 etCity.setText("");
+
+                Intent intent = new Intent();
+                setResult(104,intent);
+                finish();
             }
         });
     }

@@ -34,21 +34,25 @@ public class MainActivity extends AppCompatActivity{
         readdata.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,ReaddataAct.class));
-
+                Intent intent2= new Intent(MainActivity.this,ReaddataAct.class);
+               // startActivityForResult(intent2,102);
+            startActivity(intent2);
             }
         });
-
     deletedata.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            startActivity(new Intent(MainActivity.this,DeletedataAct.class));
+            Intent intent3= new Intent(MainActivity.this,DeletedataAct.class);
+            startActivityForResult(intent3,103);
         }
     });
         updatedata.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,UpdatedataAct.class));
+                Intent intent4  = new Intent(MainActivity.this,UpdatedataAct.class);
+                startActivityForResult(intent4,104);
+
+
             }
         });
     }
