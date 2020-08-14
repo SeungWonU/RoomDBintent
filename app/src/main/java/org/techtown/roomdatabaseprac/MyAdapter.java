@@ -28,7 +28,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i){
         MyDataList md = myDataLists.get(i);
 
-        //viewHolder.txtId.setText(md.getId());
+
+
+        viewHolder.txtId.setText(String.valueOf(md.getId()));
         viewHolder.txtName.setText(md.getName());
         viewHolder.txtEmail.setText(md.getEmail());
         viewHolder.txtCity.setText(md.getCity());
@@ -40,9 +42,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
     }
     public class ViewHolder extends RecyclerView.ViewHolder{
         private TextView txtId,txtName,txtEmail,txtCity;
+        private int id;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-           // txtId=(TextView)itemView.findViewById(R.id.txt_idd);
+            txtId=(TextView)itemView.findViewById(R.id.txt_idd);
             txtName = (TextView)itemView.findViewById(R.id.txtname);
             txtEmail =(TextView)itemView.findViewById(R.id.txtemail);
             txtCity=(TextView)itemView.findViewById(R.id.txtcity);

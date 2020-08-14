@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class DeletedataAct extends AppCompatActivity {
 
@@ -29,7 +30,8 @@ public class DeletedataAct extends AppCompatActivity {
 
                 int id = Integer.parseInt(data);
                 MainActivity.myDatabase.myDao().deleteitem(id);
-               Intent intent = new Intent();
+                Toast.makeText(getApplicationContext(),"Data Delete!!",Toast.LENGTH_LONG).show();
+                Intent intent = new Intent();
                 setResult(103,intent);
                 finish();
             }
