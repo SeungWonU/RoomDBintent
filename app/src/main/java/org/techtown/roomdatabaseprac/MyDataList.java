@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey;
 
 @Entity(tableName ="mydatalist")
 public class MyDataList {
-    @PrimaryKey(autoGenerate = true)
+    @PrimaryKey//(autoGenerate = true)
     private int id;
 
     @ColumnInfo(name = "name")

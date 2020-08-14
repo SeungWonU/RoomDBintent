@@ -8,6 +8,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
@@ -26,6 +28,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i){
         MyDataList md = myDataLists.get(i);
 
+        //viewHolder.txtId.setText(md.getId());
         viewHolder.txtName.setText(md.getName());
         viewHolder.txtEmail.setText(md.getEmail());
         viewHolder.txtCity.setText(md.getCity());
@@ -39,6 +42,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
         private TextView txtId,txtName,txtEmail,txtCity;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+           // txtId=(TextView)itemView.findViewById(R.id.txt_idd);
             txtName = (TextView)itemView.findViewById(R.id.txtname);
             txtEmail =(TextView)itemView.findViewById(R.id.txtemail);
             txtCity=(TextView)itemView.findViewById(R.id.txtcity);

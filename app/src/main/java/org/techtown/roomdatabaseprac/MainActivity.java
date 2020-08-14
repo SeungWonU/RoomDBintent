@@ -38,19 +38,26 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
             case R.id.button_add:{
                 Intent intent =new Intent(MainActivity.this,ADDdataAct.class);
                 startActivityForResult(intent,101);
+                //startActivity(intent);
+                break;
             }
             case R.id.button_read:{
                 Intent intent2= new Intent(MainActivity.this,ReaddataAct.class);
-                startActivity(intent2);
+                startActivityForResult(intent2,102);
+                //startActivity(intent2);
+                break;
             }
             case R.id.button_delete:{
                 Intent intent3= new Intent(MainActivity.this,DeletedataAct.class);
-                startActivityForResult(intent3,103);
+               startActivityForResult(intent3,103);
+              //  startActivity(intent3);
+                break;
             }
             case R.id.button_update:{
                 Intent intent4  = new Intent(MainActivity.this,UpdatedataAct.class);
                 startActivityForResult(intent4,104);
-
+               // startActivity(intent4);
+                break;
             }
         }
     }

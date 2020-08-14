@@ -7,17 +7,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 public class ADDdataAct extends AppCompatActivity {
-    EditText etID2,etName2,etEmail2,etCity2;
+    EditText etName2,etEmail2,etCity2,etID2;
+
     private Button btn_save2;
 
     protected void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
         setContentView(R.layout.activity_a_d_ddata);
 
-        etID2 =(EditText)findViewById(R.id.editID2);
+        etID2 =(EditText) findViewById(R.id.editID2);
         etName2=(EditText)findViewById(R.id.editName2);
         etEmail2=(EditText)findViewById(R.id.editEmail2);
         etCity2=(EditText)findViewById(R.id.editCity2);

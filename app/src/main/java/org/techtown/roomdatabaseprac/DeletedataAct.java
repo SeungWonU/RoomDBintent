@@ -26,9 +26,10 @@ public class DeletedataAct extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String data = etText2.getText().toString();
+
                 int id = Integer.parseInt(data);
                 MainActivity.myDatabase.myDao().deleteitem(id);
-                Intent intent = new Intent();
+               Intent intent = new Intent();
                 setResult(103,intent);
                 finish();
             }
