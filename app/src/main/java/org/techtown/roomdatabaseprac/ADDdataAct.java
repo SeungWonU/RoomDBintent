@@ -37,7 +37,7 @@ public class ADDdataAct extends AppCompatActivity {
 
 
                 MyDataList myDataList = new MyDataList();
-                myDataList.getId();
+                //myDataList.getId();
                 myDataList.setId(uid2);
                 myDataList.setName(name2);
                 myDataList.setEmail(email2);

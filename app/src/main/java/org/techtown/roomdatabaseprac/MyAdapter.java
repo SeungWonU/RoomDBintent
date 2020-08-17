@@ -15,9 +15,11 @@ import java.util.List;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
     List<MyDataList>myDataLists;
 
-    public MyAdapter(List<MyDataList>myDataLists){
+    public MyAdapter(List<MyDataList>myDataLists)
+    {
         this.myDataLists = myDataLists;
     }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup,int i){
@@ -28,8 +30,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i){
         MyDataList md = myDataLists.get(i);
 
-
-
         viewHolder.txtId.setText(String.valueOf(md.getId()));
         viewHolder.txtName.setText(md.getName());
         viewHolder.txtEmail.setText(md.getEmail());
@@ -37,12 +37,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
 
     }
 
-    public int getItemCount(){
+    public int getItemCount()
+    {
         return myDataLists.size();
     }
+
+
     public class ViewHolder extends RecyclerView.ViewHolder{
         private TextView txtId,txtName,txtEmail,txtCity;
-        private int id;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             txtId=(TextView)itemView.findViewById(R.id.txt_idd);
